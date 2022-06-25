@@ -1,0 +1,18 @@
+{{>header}}
+{{>navbar}}
+
+
+
+{{#each users}}
+
+<div style="background-color:#ddd">
+    <a href="/profile/{{this.id}}">
+
+<p>{{this.uname}}</p>
+<p>{{this.email}}</p>
+<img src="/{{this.photo}}" width="200"/>
+ 
+</a>
+<a href="/editprofile">Edit</a>
+</div>
+{{/each}} 

@@ -1,0 +1,43 @@
+{{>header}}
+<body>
+    {{>navbar}}
+
+
+
+{{!-- npmbicrypt --}}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="list-group">
+                 {{#each users}} 
+           <a href="/profile/{{this.id}}" class="list-group-item list-group-item-action">{{this.uname}}</a>
+          {{/each}}
+    
+          
+  
+        </div>
+        </div>
+        <div class="col-sm-8">
+                
+                <form method="post" action="/submitpost">
+               
+                <textarea class="md-textarea form-control" row="12" col="12" name="upost" id="" cols="30" rows="10"></textarea></br>
+               
+               <button class="btn btn-primary">Post Feelings</button>
+                 </button>
+                </form>
+
+                {{#each status}}
+                  <b>{{this.uname}}</b>
+                  <button class="btn btn-danger">DELETE</button>
+                  <p>{{this.post}}</p></br>
+                  
+                {{/each}}
+        </div>
+    </div>
+</div>
+
+</body>
+{{>footer}}
+</html>

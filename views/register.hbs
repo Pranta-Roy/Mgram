@@ -1,0 +1,13 @@
+{{>header}}
+{{>navbar}}
+<form action="/submitform" method="post" enctype="multipart/form-data">
+   <label for="name">Username:<input type="text" name="uname" placeholder="Enter your name"/></label></br></br>
+   <label for="email">Email:<input type="text" name="email" placeholder="Enter your email"/></label></br></br>
+   
+   <label for="password">Password:</label><input type="password" name="pass" placeholder="Enter password"/></label></br></br>
+   <input type="file" name="picture"/></br></br>
+   <button> Sign In </button></br>
+<h3>Have an account?<a href="/login">Log In</a> instead</h3>
+</form>
+{{>footer}}
+</html>
